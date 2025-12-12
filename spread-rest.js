@@ -28,11 +28,41 @@ const groceryItems = [
       },
 ];
 
+const myobj={
+  nama: 'Rifky',
+  nip: '199105172025051001'
+}
 
-//const newGroceryItems = [...groceryItems, 200]; //spread array --copy
-//const newGroceryItems = {...groceryItems[0], quantity:220} //spread obj --copy
+// 1. copy array/obj dan menambahkan item
+//const newGroceryItems = [...groceryItems, 200]; //spread array --copy dan tambah
+//const newGroceryItems = {...groceryItems[0], quantity:220} //spread obj --copy dan timpa
 //console.log(newGroceryItems)
 
-const [first, ...others] = groceryItems;
+//2. spread - menggabungkan array dgn array/ array dg obj
+// const copy = [...groceryItems,myobj];
+// console.log(copy)
+
+// ----------------------------------------------------------------
+
+//1. rest - memilih salah satu, sisanya ditampung
+const [first, ...others] = groceryItems; 
 console.log(first);
 console.log(others)
+
+// 2. rest -  menampung sisa arg
+/*function myFunc(a,b,...c){
+  return c
+};
+console.log(myFunc(1,2,3,4,5))*/
+
+//3. rest - contoh
+/*function filterBy(type, ...values){
+  return values.filter(item=>typeof(item)===type)
+};
+console.log(filterBy('boolean', 1,2,3,'Rifky',4,5,'Alkatiri', true, 6, 3.14))*/
+
+
+
+
+
+
